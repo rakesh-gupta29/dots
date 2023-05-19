@@ -1,0 +1,17 @@
+<header>
+    {{ $cur := .}} {{ range $.Site.Menus.header}} {{ $active := in $cur.Permalink .URL }}
+    <a 
+        class="{{ if $active }} active {{ end }}"
+        href="{{ .URL }}"
+        title="{{ .Title }}" >
+        {{ .Name }}
+    </a> 
+    {{ end }}
+    <a
+    href="{{ .Site.BaseURL }}/index.xml"
+    class="feed"
+    title="Subscribe to feed"
+  >
+    feed 
+  </a>
+</header>

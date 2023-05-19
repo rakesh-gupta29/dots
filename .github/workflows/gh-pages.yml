@@ -1,38 +1,29 @@
-name: github pages
+name: Deploy
 
 on:
   push:
     branches:
-      - main # Pipeline will only be triggered from `main`.
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    runs-on: ubuntu-latest
 
-      - name: Setup Hugo
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.68.3'
+          hugo-version: 'latest'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests pyyaml
-
-     
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages  # deploying branch
-          cname: zerodha.tech
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          publish_branch: gh-pages
+          publish_dir: ./public

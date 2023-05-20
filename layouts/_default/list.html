@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+	{{ if isset .Data "Term" }}
+		<h1 class="big">
+			{{ if eq (index .Data "Singular") "author" }}@{{ end }}{{ .Data.Term }}
+		</h1>
+	{{ else }}
+		<h1 class="big">All posts</h1>
+	{{ end }}
+	{{ $section := .Section }}
+{{ $pages := where .Site.RegularPages "Type" "in" (slice $section) }}
+{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+{{ range $paginator.Pages }}
+<h3 class="title">
+	<a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
+</h3>
+	{{ end }}
+ {{ partial "footer.html" . }}

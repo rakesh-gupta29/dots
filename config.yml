@@ -1,23 +1,27 @@
 baseURL: "https://example.com"
 languageCode: "en-us"
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: true
 paginate: 10
 title: "clone blog website"
 params:
   description: desc for clone blog website
-  tags: ["list", "of", "keywords"]
+  tags: ["list", "of", "keywords","golang"]
   favicon: https://res.cloudinary.com/rakesh-gupta/image/upload/v1684476786/github-logo_icon-icons.com_73546_voaw1h.ico
   album: https://res.cloudinary.com/rakesh-gupta/image/upload/v1680082086/output_ritppq.webp
-  mainSections: ["blog","news"]
+  mainSections: ["blogs", "news"]
 
-taxonomies:
-   tag: "tags"
-   author: "authors"
-
-
+outputs:
+  home: ["HTML","RSS"]
 author:
   name: rakesh gupta
   email: rakesh.rkgupta29@gmail.com
   phone: 1234567890
+
+taxonomies:
+  tag: tags
+  author: authors
+
 menu:
   header:
     - identifier: home
@@ -26,9 +30,17 @@ menu:
       weight: 1
     - identifier: blog
       name: Blog
-      url: /blog
+      url: /blogs
       weight: 2
+    - identifier: news
+      name: News
+      url: /news
+      weight: 3
     - identifier: tags
       name: Tags
       url: /tags
-      weight: 3
+      weight: 4
+    - identifier: authots
+      name: Authors
+      url: /authors
+      weight: 5

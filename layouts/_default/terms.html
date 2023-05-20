@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	{{ partial "head.html" .}}
+<body>
+	{{ partial "header.html" .}}
+
+	<main>
+		{{ $data := .Data }}
+		{{ if eq .RelPermalink "/authors/" }}
+		<ul>
+			{{ range $index, $value := .Data.Terms.ByCount }}
+			<li>
+				<a href="{{ $.Site.BaseURL }}/{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ $value.Name }}<sup>{{ $value.Count }}</sup></a>
+			</li>
+			{{ end }}
+		</ul>
+		{{ else }}
+			{{ range $index, $value := .Data.Terms.ByCount }}
+				<h1>  <a href="{{ $.Site.BaseURL }}/{{ $data.Plural }}/{{ $value.Name | urlize }}/">{{ $value.Name }} : {{ $value.Count }}</a></h1>				
+			{{ end }}
+		{{ end }}
+
+	</main>
+
+	{{ partial "footer.html" .}}
+</body>
+</html>

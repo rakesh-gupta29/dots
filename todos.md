@@ -1,1 +1,3 @@
 - using build-in twitter internal partial
+- creating a rss feed for each page
+- adding multiple routes for a single page 

@@ -1,10 +1,52 @@
-
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
-
-
+{{ partial "head.html" . }} {{ partial "header.html" . }}
 
 <main>
-     <h1> {{ .Title }} </h1>
-     <h1>{{ .Content }} </h1>
+{{ $author := .Params.author }}
+{{ $tags := .Params.tags }}
+
+{{ $relatedBlogs := slice }}
+{{ range .Site.Pages }}
+  {{ if   and (eq .Params.author $author) (ne .Permalink $.Permalink) }}
+    {{ $relatedBlogs = $relatedBlogs | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $relatedBlogs) 0 }}
+  <div class="related-blogs">
+    <h3>More Blogs by the author  {{ $author }}</h3>
+    <ul>
+      {{ range first 5 $relatedBlogs }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+
+
+
+
+{{ $relatedTags := slice }}
+{{ range .Site.Pages }}
+  {{ if   and (eq .Params.tags $tags) (ne .Permalink $.Permalink) }}
+    {{ $relatedTags = $relatedTags | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $relatedTags) 0 }}
+  <div class="related-blogs">
+    <h3>More Blogs by the author  {{ $author }}</h3>
+    <ul>
+      {{ range first 5 $relatedTags }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+
+
+
+  <h1>{{ .Title }}</h1>
+  <h1>{{ .Content }}</h1>
 </main>

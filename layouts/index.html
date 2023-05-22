@@ -2,6 +2,8 @@
 
 {{ partial "head.html" .}} {{ partial "seo.html" .}}
 <body>
+
+
     {{ partial "header.html" .}}
 	{{ $pagesRoot  := where .Site.RegularPages "Type" "in" "page" }}
 	{{ $pagesFromFolder  := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
@@ -33,5 +35,7 @@
 	{{ end }}
 	
      {{ partial "footer.html" .}}
+	 {{ template "partials/paginator.html" . }}
+	 
 </body>
 </html>

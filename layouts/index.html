@@ -2,8 +2,10 @@
 
 {{ partial "head.html" .}} {{ partial "seo.html" .}}
 <body>
-     {{ partial "header.html" .}}
-   {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ partial "header.html" .}}
+	{{ $pagesRoot  := where .Site.RegularPages "Type" "in" "page" }}
+	{{ $pagesFromFolder  := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+	{{ $pages := union $pagesRoot $pagesFromFolder }}
 	{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 	{{ range $paginator.Pages }}
 		<div class="post blurb">

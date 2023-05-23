@@ -1,9 +1,23 @@
 {{ partial "head.html" . }} {{ partial "header.html" . }}
 
-<main>
+
+ <body class="bg-light-gray">
+
+  
+<main class="w-container pt-14 pb-20   ">
+  <section class="text-center px-3 space-y-3 py-5">
+    <span>{{.Params.author}}</span>
+    <h1>{{.Title }} </h1>
+  </section>
+
+  <section class="content pt-20 pb-20 mb-10 border-b-1 border-solid border-dark-gray border-opacity-50">
+    {{.Content }}
+  </section>
+
+
 {{ $author := .Params.author }}
 {{ $tags := .Params.tags }}
-
+  
 {{ $relatedBlogs := slice }}
 {{ range .Site.Pages }}
   {{ if   and (eq .Params.author $author) (ne .Permalink $.Permalink) }}
@@ -46,7 +60,13 @@
 
 
 
-
-  <h1>{{ .Title }}</h1>
-  <h1>{{ .Content }}</h1>
 </main>
+{{ partial "footer.html" .}}
+
+</body>
+
+
+
+
+
+

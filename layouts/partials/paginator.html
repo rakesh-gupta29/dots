@@ -1,6 +1,6 @@
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 }}
-<ul class="pagination">
+<ul class="pagination w-container text-center  flex flex-nowrap gap-2 justify-center pt-5 pb-20 list-none px-3">
 	<li class="page-item page-prev">
 	{{ if $pag.HasPrev }}
     <a {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}"{{ end }} class="page-link" aria-label="Previous"><span aria-hidden="true">← Prev page</span></a>

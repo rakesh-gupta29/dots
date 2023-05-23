@@ -75,7 +75,7 @@
     name="keywords"
     content="{{ range .Site.Params.Tags }}{{ . }},{{ end }}"
   />
-  {{ end }} {{ $style := resources.Get "css/index.css" | resources.PostCSS }}
+  {{ end }} {{ $style := resources.Get "css/style.css" }}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link

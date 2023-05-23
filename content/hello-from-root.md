@@ -1,5 +1,5 @@
 ---
-title: "hello from root"
+title: "hello from  test file "
 description: "dummy eklfmeklfmef eklfjeklf e"
 date: "2020-11-24T17:35:00+05:30"
 author: checking
@@ -7,13 +7,11 @@ authors: ["checking"]
 tags: ["kefmnke"]
 ---
 
-# Sample Markdown Content
 
-  <!-- {{<  shortcodes/youtube videoID="ZVgergj8Xe4"  >}} -->
-  {{< shortcodes/image alt="this is an image" title="just going to add some title for this  " caption="checking" src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" >}}
+
 This is a **paragraph** with some basic formatting.
 
-## Headings
+## Headings 2 
 
 ### Heading 3
 
@@ -33,7 +31,6 @@ Unordered list:
 - Item 3
 
 Ordered list:
-
 1. First item
 2. Second item
 3. Third item
@@ -44,7 +41,7 @@ Ordered list:
 
 ## Images
 
-![Alt Text](https://example.com/image.jpg)
+![sample image](https://plus.unsplash.com/premium_photo-1684746338578-4a8f89c62a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60)
 
 ## Blockquotes
 

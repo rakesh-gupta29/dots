@@ -18,3 +18,4 @@ inclde the follwing codes for the links and the code is to shared
 ```
 
 - adding the role and accessibiluty tags in header links 
+- how to I pass the param to the taxonomy page 

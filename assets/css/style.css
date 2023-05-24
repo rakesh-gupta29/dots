@@ -422,6 +422,10 @@ video {
   display: none;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1 {
   font-size: 3rem;
   line-height: 1.25;
@@ -718,12 +722,16 @@ pre {
   text-underline-offset: 2px;
 }
 
-.content h1, .content h2, .content h3 , .content h4 {
+.content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
   padding-top: 2rem;
   padding-bottom: 0.5rem;
 }
 
-.content h5, .content h6 {
+.content h5,
+  .content h6 {
   padding-top: 2rem;
 }
 
@@ -795,6 +803,12 @@ pre {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1070,4 +1084,3 @@ body {
     padding-bottom: 5rem;
   }
 }
-

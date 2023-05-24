@@ -6,13 +6,11 @@
     {{ partial "header.html" .}}
 	<main class="w-container pt-14 pb-20">
 		<section class="text-center px-3 space-y-3 py-5">
-			<span>Collection of Tags</span>
-			<h1>The gateway to curation: Discovering the array of Topics</h1>
+			<h1>{{ .Name }}</h1>
 		</section>
-		<section class="space-y-4 py-12 md:py-16 lg:py-20">
+		<section class=" py-12 md:py-16 lg:py-20  space-y-10 ">
 		  {{ range .Data.Pages }}
-       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-       <p>{{ .Description }}</p>
+    {{ partial "post.html" .}}
       {{ end }}
 		</section>
 	</main>

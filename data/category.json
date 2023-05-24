@@ -1,0 +1,12 @@
+[
+  {
+    "term": "tags",
+    "title": "some title for tags",
+    "tagline": " tagline of the page"
+  },
+  {
+    "term": "authors",
+    "title": "some title for authors",
+    "tagline": " tagline of the page"
+  }
+]

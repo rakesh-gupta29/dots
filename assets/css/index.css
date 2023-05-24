@@ -21,57 +21,55 @@ body {
   }
 
   .content a {
-    @apply  font-semibold underline decoration-from-font underline-offset-2 text-brick;
+    @apply font-semibold underline decoration-from-font underline-offset-2 text-brick;
   }
-  .content h1, .content h2, .content h3 , .content h4 {
-    @apply pt-8 pb-2 
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
+    @apply pt-8 pb-2;
   }
-  .content h5, .content h6 {
-    @apply pt-8
+  .content h5,
+  .content h6 {
+    @apply pt-8;
   }
-
-
-
 }
 @layer base {
+  main {
+    @apply min-h-screen;
+  }
 
- 
   h1 {
-    @apply text-5xl xl:text-6xl leading-tight lg:leading-tight xl:leading-tight ;
+    @apply text-5xl xl:text-6xl leading-tight lg:leading-tight xl:leading-tight;
   }
   h2 {
-    @apply text-3xl xl:text-4xl leading-tight lg:leading-tight xl:leading-tight  ;
+    @apply text-3xl xl:text-4xl leading-tight lg:leading-tight xl:leading-tight;
   }
   h3 {
-    @apply text-2xl xl:text-3xl leading-tight lg:leading-tight xl:leading-tight ;
+    @apply text-2xl xl:text-3xl leading-tight lg:leading-tight xl:leading-tight;
   }
   h4 {
-    @apply text-title xl:text-2xl leading-tight lg:leading-tight xl:leading-tight ;
+    @apply text-title xl:text-2xl leading-tight lg:leading-tight xl:leading-tight;
   }
   h5 {
-    @apply text-lg xl:text-xl leading-snug lg:leading-snug xl:leading-snug ;
+    @apply text-lg xl:text-xl leading-snug lg:leading-snug xl:leading-snug;
   }
   h6 {
-    @apply text-base xl:text-lg leading-normal lg:leading-normal xl:leading-normal ;
+    @apply text-base xl:text-lg leading-normal lg:leading-normal xl:leading-normal;
   }
   p {
-    @apply text-sm lg:text-base xl:text-lg leading-normal lg:leading-normal xl:leading-normal ;
+    @apply text-sm lg:text-base xl:text-lg leading-normal lg:leading-normal xl:leading-normal;
   }
-  ul{
-    @apply pl-5 list-disc pb-8 pt-2 
+  ul {
+    @apply pl-5 list-disc pb-8 pt-2;
   }
-   ol {
-    @apply list-decimal  pl-5  pt-2 
-   }
-   li {
-    @apply  pt-1
-   }
-   pre {
-    @apply p-4 rounded-md 
-   }
- 
-
-
-
+  ol {
+    @apply list-decimal  pl-5  pt-2;
+  }
+  li {
+    @apply pt-1;
+  }
+  pre {
+    @apply p-4 rounded-md;
+  }
 }
-

@@ -2,19 +2,16 @@
 title: "hello from  test file "
 description: "dummy eklfmeklfmef eklfjeklf e"
 date: "2020-11-24T17:35:00+05:30"
-author: checking
-authors: ["checking"]
+author: home
+authors: ["home"]
 tags: ["kefmnke"]
 ---
 
-
-
 This is a **paragraph** with some basic formatting.
 
-## Headings 2 
+## Headings 2
 
 ### Heading 3
-
 
 #### Heading 4
 
@@ -31,6 +28,7 @@ Unordered list:
 - Item 3
 
 Ordered list:
+
 1. First item
 2. Second item
 3. Third item
@@ -56,3 +54,4 @@ Code block:
 ```python
 def hello():
     print("Hello, World!")
+```

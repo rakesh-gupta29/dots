@@ -1,4 +1,4 @@
 ---
- title: title for blogs listing page
-tagline: tagline for the blogs page
+    tagline: Reflections of Ramble
+    title: Collection of my Observations, Learnings and Opinions
 ---

@@ -693,6 +693,10 @@ pre {
      object-position: top;
 }
 
+.d {
+  border: 1px solid red !important;
+}
+
 .w-container {
   margin-left: auto;
   margin-right: auto;
@@ -743,6 +747,11 @@ pre {
   position: relative;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -761,6 +770,10 @@ pre {
 
 .hidden {
   display: none;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .list-none {
@@ -833,6 +846,10 @@ pre {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.border-1 {
+  border-width: 1px;
 }
 
 .border-b-1 {
@@ -966,6 +983,11 @@ pre {
 .text-dark-gray {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
 }
 
 .underline {

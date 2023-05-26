@@ -693,10 +693,6 @@ pre {
      object-position: top;
 }
 
-.d {
-  border: 1px solid red !important;
-}
-
 .w-container {
   margin-left: auto;
   margin-right: auto;
@@ -754,6 +750,10 @@ pre {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -848,8 +848,14 @@ pre {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.border-1 {
-  border-width: 1px;
+.space-y-7 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-b-1 {
@@ -878,6 +884,15 @@ pre {
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -903,6 +918,10 @@ pre {
   padding-bottom: 1.75rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-20 {
   padding-bottom: 5rem;
 }
@@ -913,6 +932,10 @@ pre {
 
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pt-14 {
@@ -975,6 +998,11 @@ pre {
   line-height: 1.25;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(19 19 19 / var(--tw-text-opacity));
+}
+
 .text-brick {
   --tw-text-opacity: 1;
   color: rgb(162 84 61 / var(--tw-text-opacity));
@@ -985,9 +1013,8 @@ pre {
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 
-.text-red-300 {
-  --tw-text-opacity: 1;
-  color: rgb(252 165 165 / var(--tw-text-opacity));
+.text-opacity-80 {
+  --tw-text-opacity: 0.8;
 }
 
 .underline {

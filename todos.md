@@ -12,10 +12,7 @@ inclde the follwing codes for the links and the code is to shared
 // https://twitter.com/intent/tweet?text=Checkout%20this%20awesome%20blog%20I%20found
 // copy the url:
 
-
-
-
 ```
 
-- adding the role and accessibiluty tags in header links 
-- how to I pass the param to the taxonomy page 
+- adding the role and accessibiluty tags in header links
+- how to I pass the param to the taxonomy page

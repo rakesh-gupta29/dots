@@ -8,3 +8,14 @@ tags: ["golang"]
 ---
 
 # Hello from blogs folder
+{{% table %}}
+| Name  | Age |
+|-------|-----|
+| Alice | 25  |
+| Bob   | 30  |
+{{% /table %}}
+
+ this will come after table.
+
+
+

@@ -8,6 +8,9 @@
       <h5>{{ upper (index .Params.tags 0 ) }} - {{ .Params.date | dateFormat "2 January 2006" }}</h5>
     </section>
     {{ $name := .Params.tags }}
+  {{ partial "share_btns.html" .}}
+
+  
 
     <section
       class="content pt-20 pb-20 mb-10 border-b-1 border-solid border-dark-gray border-opacity-50"

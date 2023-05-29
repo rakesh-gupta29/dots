@@ -1,4 +1,4 @@
-# Hugo Blog
+# Personal Blog Website
 
 HUGO is a highly performant, configurable and easy to use static website generator written in [Go](https://go.dev).
 

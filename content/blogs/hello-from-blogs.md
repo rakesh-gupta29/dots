@@ -6,16 +6,15 @@ author: rakesh
 authors: ["rakesh"]
 tags: ["golang"]
 ---
+{{< table >}}
+| # | First   | Last      | Handle   |
+|---|---------|-----------|----------|
+| 1 | Mark    | Otto      | @mdo     |
+| 2 | Jacob   | Thornton  | @fat     |
+| 3 | Larry   | Wild      | @twitter |
 
-# Hello from blogs folder
-{{% table %}}
-| Name  | Age |
-|-------|-----|
-| Alice | 25  |
-| Bob   | 30  |
-{{% /table %}}
+{{< /table >}}
 
- this will come after table.
 
 
 

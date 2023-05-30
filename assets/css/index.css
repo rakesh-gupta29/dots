@@ -72,4 +72,27 @@ body {
   pre {
     @apply p-4 rounded-md;
   }
+
+  table {
+    @apply bg-white w-full rounded-md;
+  }
+
+  th {
+    @apply px-6 py-4 text-left;
+  }
+
+  td {
+    @apply whitespace-nowrap px-6 py-4 ;
+  }
+
+  thead {
+    @apply border-b font-medium;
+  }
+
+  tbody tr {
+    @apply border-b  border-b-light-gray;
+  }
+  tbody tr:nth-child(2n+1 ) {
+    @apply bg-light-gray bg-opacity-25
+  }
 }

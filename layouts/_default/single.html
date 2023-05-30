@@ -23,8 +23,8 @@
     (ne .Permalink $.Permalink) }} {{ $relatedBlogs = $relatedBlogs | append .
     }} {{ end }} {{ end }} {{ if gt (len $relatedBlogs) 0 }}
     <div class="related-blogs pb-10">
-      <h3 class="mb-5 font-bold bg-white bg-opacity-40 rounded-lg py-4 pl-4">
-        More from author "{{ upper $author }}"
+      <h3 class="mb-5 font-semibold bg-white bg-opacity-40 rounded-lg py-4 pl-4">
+        More from author <span class="text-brick">"{{ upper $author }}"</span>
       </h3>
       <ul class="space-y-7">
         {{ range first 5 $relatedBlogs }} {{ partial "post.html" .}} {{ end }}
@@ -35,8 +35,8 @@
     $relatedTags | append . }} {{ end }} {{ end }} {{ if gt (len $relatedTags) 0
     }}
     <div class="related-blogs pb-10">
-      <h3 class="mb-5 font-bold bg-white bg-opacity-40 rounded-lg py-4 pl-4">
-        More from category "{{ upper ( index $name 0 ) }}"
+      <h3 class="mb-5 font-semibold bg-white bg-opacity-40 rounded-lg py-4 pl-4">
+        More from category <span class="text-brick">"{{  upper ( index $name 0) }}"</span>
       </h3>
       <ul class="space-y-7">
         {{ range first 5 $relatedTags }} {{ range first 5 $relatedBlogs }} {{

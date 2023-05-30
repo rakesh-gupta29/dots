@@ -4,7 +4,7 @@
   <main class="w-container pt-14 pb-20">
     <section class="text-center px-3 space-y-3 py-5">
       <h1>{{.Title }}</h1>
-      <h5>From <span class="font-bold text-black text-opacity-80">{{ upper .Params.author}}</span></h5>
+      <h5>From <span class="font-bold text-black">{{ upper .Params.author}}</span></h5>
       <h5>{{ upper (index .Params.tags 0 ) }} - {{ .Params.date | dateFormat "2 January 2006" }}</h5>
     </section>
     {{ $name := .Params.tags }}

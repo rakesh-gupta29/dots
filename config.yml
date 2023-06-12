@@ -47,7 +47,7 @@ menu:
       name: Tags
       url: /tags
       weight: 3
-    - identifier: authots
+    - identifier: authors
       name: Authors
       url: /authors
       weight: 4
